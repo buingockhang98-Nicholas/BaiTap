@@ -1,4 +1,11 @@
 
+ 
+ <?php
+header(" localhost:8888/Index.php");
+die();
+
+?> 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,6 +26,9 @@
 <div class="container">
     <!-- <form action="get.php" method="GET" role="form"> -->
         <legend>Đăng nhập</legend>
+
+      
+
     <form action="" method="post">
     <div class="form-group">
             <label for="">Email</label>
@@ -37,7 +47,7 @@
 </div>
 
 <?php
-;
+
 if (isset($_POST['email'])) {
     # code...
     echo $_POST['email'];
@@ -49,6 +59,7 @@ if (isset($_POST['password'])) {
 }
 
 ?>
+
 
 </body>
 </html>
