@@ -1,37 +1,33 @@
 
+
+
+
 <h1>Danh sách học sinh</h1>
 <?php
 
-$authors = array(
-    array(
-        'Tên' => 'Nguyễn Văn Cường',
-        'Lớp' => '12a1',
-        'Năm sinh' => '25/01/1998'
-    ),
-    array(
-        'Tên' => 'Trương Phúc Hoài Minh',
-        'Lớp' => '12a3',
-        'Năm sinh' => '9/01/1998'
-    ),
-    array(
-        'Tên' => 'Hoàng Văn Tuyền',
-        'Lớp' => '12a8',
-        'Năm sinh' => '2/06/1998'
-    ),
-    array(
-        'Tên' => 'Nguyễn Tình',
-        'Lớp' => '12a9',
-        'Năm sinh' => '25/06/1998'
-    )
-);
-echo '<ul>';
-foreach ($authors as $key => $author)
+//$list = new Lists($Name,$Class,$Date);
+//$login->list();
+
+require("../Models/User.php");
+$users = [
+    new User('Toan','12a1','25/01/1998'),
+    new User('Giang','12a2','01/01/1998'),
+    new User('Mao','12a3','09/04/1994'),
+];
+foreach ($users as $user) 
 {
-    echo '<li>';
-    echo 'Tên: ' . $author['Tên'] . '<br/>';
-    echo 'Lớp: ' . $author['Lớp'] . '<br/>';
-    echo 'Năm sinh: ' . $author['Năm sinh'] . '<br/>';
-    echo '</li>';
-}
-echo '</ul>';
+    
+ //echo $user->name .'<br/>';//goi ham ra
+ //echo $user->class .'<br/>';
+ //echo $user->date .'<br/>';
+
+
+
+       
+		echo "<table border=1 cellspacing=0 cellpading=0>  
+		<tr> <td><font color=red>Tên</td> <td>$user->name </font></td></tr>   
+		<tr> <td><font color=blue>Lớp</td> <td>$user->class</font></td></tr> 
+		<tr> <td><font color=blue>Ngày</td> <td>$user->date</font></td></tr>  
+		</table>";  //do ra table
+    }
 ?>  

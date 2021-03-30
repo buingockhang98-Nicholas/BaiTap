@@ -1,13 +1,17 @@
 <?php
 class Login{
-    public $username;
-    public $pasword;
-    function __condstruct($username, $pasword){
-        $this->username = $username;
-        $this->password - $pasword;
+  const email = 'email@email.com';
+  const password = '12345678';
+    public $email;
+    public $password;
+    function __construct($email, $password){
+        $this->email = $email;
+        $this->password = $password;
     }
     
     public function login(){
-        
+      return ($this->email === self::email && $this->password === self::password);
     }
 }
+
+?>
