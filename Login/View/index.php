@@ -22,12 +22,15 @@ foreach ($users as $user)
  //echo $user->date .'<br/>';
 
 
-
+?>
        
-		echo "<table border=1 cellspacing=0 cellpading=0>  
-		<tr> <td><font color=red>Tên</td> <td>$user->name </font></td></tr>   
-		<tr> <td><font color=blue>Lớp</td> <td>$user->class</font></td></tr> 
-		<tr> <td><font color=blue>Ngày</td> <td>$user->date</font></td></tr>  
-		</table>";  //do ra table
+		 <table border=1 cellspacing=0 cellpading=0>  
+		<tr> <td><font color=red>Tên</td> <td> <?= $user->name ?> </font></td></tr>   
+		<tr> <td><font color=blue>Lớp</td> <td> <?= $user->class ?> </font></td></tr> 
+		<tr> <td><font color=blue>Ngày</td> <td> <?= $user->date ?> </font></td></tr>  
+		</table>  
+        <?php
+        //do ra table
     }
+
 ?>  
